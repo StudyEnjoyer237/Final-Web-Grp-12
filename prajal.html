@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- zoom in out -->
+
+	
+    <title>2x2 Image Grid with Topics</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Navbar Styles */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #00bcd4;
+        }
+
+        /* Grid container styles */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+            grid-template-rows: repeat(2, 1fr); /* Two equal rows */
+            gap: 10px;
+            width: 80vw; /* 80% of the viewport width */
+            height: 80vh; /* 80% of the viewport height */
+            max-width: 1200px; /* Optional max width */
+            max-height: 800px; /* Optional max height */
+            margin: 20px auto; /* Center the grid vertically and horizontally */
+        }
+
+        .grid-item {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* Add space between image and topic */
+            align-items: center;
+            border-radius: 8px;
+            overflow: hidden;
+            text-align: center;
+            background-color: #fff; /* Add a white background to grid items */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            height: 100%; /* Ensure grid items take full height of their container */
+        }
+
+        .grid-item img {
+            width: 100%;
+            height: 75%; /* Increase the image height (75% of grid item) */
+            object-fit: cover; /* Maintain aspect ratio while covering the area */
+        }
+
+        .topic {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #333;
+            height: 25%; /* Topic section takes 25% of grid item height */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #ff9800;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: auto; /* Push the footer to the bottom */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+   <nav>
+ <div class="logo">
+   <h1><a href="index.html">Arima Onsen</a></h1>
+</div>
+<ul>
+   <li><a href="food.html">Food</a></li>
+    <li><a href="prajal.html">Seasonal</li>
+    <li><a href="lokasi.html">Location</a></li>
+    <li><a href="deudhtml.html">Videos</a></li>
+</ul>
+
+    </nav>
+
+<div class="grid-container">
+    <div class="grid-item">
+        <img src="image1.jpg" alt="Spring">
+        <div class="topic">Spring</div>
+    </div>
+    <div class="grid-item">
+        <img src="image2.jpg" alt="Summer">
+        <div class="topic">Summer</div>
+    </div>
+    <div class="grid-item">
+        <img src="image3.jpg" alt="Autumn">
+        <div class="topic">Autumn</div>
+    </div>
+    <div class="grid-item">
+        <img src="image4.jpg" alt="Winter">
+        <div class="topic">Winter</div>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2025 GRP12. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
